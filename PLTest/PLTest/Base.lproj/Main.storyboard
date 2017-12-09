@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="r7M-jJ-uYe">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Nav Controller-->
+        <scene sceneID="otO-jk-Unz">
+            <objects>
+                <navigationController id="r7M-jJ-uYe" customClass="TFNavController" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="j5f-n0-Irr">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="wWN-po-Pc9" kind="relationship" relationship="rootViewController" id="zKY-lW-ZyW"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PEm-bC-zMi" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-964" y="17"/>
+        </scene>
+        <!--横竖屏切换-->
+        <scene sceneID="kLc-xf-2aq">
+            <objects>
+                <viewController id="wWN-po-Pc9" customClass="ViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="OCh-fM-SCD">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FBi-Oo-cdT">
+                                <rect key="frame" x="124.5" y="355.5" width="125" height="44"/>
+                                <color key="backgroundColor" red="1" green="0.67110834149999998" blue="0.64856394309999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="MOl-nS-WNy"/>
+                                    <constraint firstAttribute="width" constant="125" id="xa0-mR-7xa"/>
+                                </constraints>
+                                <state key="normal" title="Present出横屏"/>
+                                <connections>
+                                    <action selector="clickPresentBtn:" destination="wWN-po-Pc9" eventType="touchUpInside" id="VLW-sb-aUN"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="W6O-5X-4Lg">
+                                <rect key="frame" x="124.5" y="267.5" width="125" height="44"/>
+                                <color key="backgroundColor" red="1" green="0.67110834149999998" blue="0.64856394309999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="125" id="Zfc-by-YK8"/>
+                                </constraints>
+                                <state key="normal" title="Push出横屏">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="clickPushBtn:" destination="wWN-po-Pc9" eventType="touchUpInside" id="F6K-2F-dnW"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="FBi-Oo-cdT" firstAttribute="height" secondItem="W6O-5X-4Lg" secondAttribute="height" id="2bN-PE-QlO"/>
+                            <constraint firstItem="FBi-Oo-cdT" firstAttribute="width" secondItem="W6O-5X-4Lg" secondAttribute="width" id="4Db-UI-qfM"/>
+                            <constraint firstItem="W6O-5X-4Lg" firstAttribute="centerY" secondItem="OCh-fM-SCD" secondAttribute="centerY" constant="-44" id="lMI-J8-GQc"/>
+                            <constraint firstItem="W6O-5X-4Lg" firstAttribute="centerX" secondItem="OCh-fM-SCD" secondAttribute="centerX" id="ldP-jy-5sE"/>
+                            <constraint firstItem="FBi-Oo-cdT" firstAttribute="top" secondItem="W6O-5X-4Lg" secondAttribute="bottom" constant="44" id="sIj-e6-rDO"/>
+                            <constraint firstItem="FBi-Oo-cdT" firstAttribute="centerX" secondItem="OCh-fM-SCD" secondAttribute="centerX" id="ysk-dC-Kh8"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="40C-b2-Tl5"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="横竖屏切换" id="t9m-0g-VmO"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SFf-gK-bwT" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-178.40000000000001" y="16.641679160419791"/>
+        </scene>
+    </scenes>
+</document>
